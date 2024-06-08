@@ -11,16 +11,15 @@ describe('Login section tests', () => {
 
   //Test all valid credentials
   LOGIN_USERS.forEach((user) => {
-    it.only('Test valid credentials for username: ' + user.username, () =>{
+    it('Test valid credentials for username: ' + user.username, () =>{
       loginPage.login(user.username, user.password)
       cy.url().should('contain', '/inventory.html')
       inventoryPage.getPageTitle().should('have.text', 'Swag Labs')
     })
   })
 
-  it('Test an user is able to log in', ()=>{
+  it('Test the standard user is able to log in', ()=>{
     loginPage.login(LOGIN_USERS[0].username, LOGIN_USERS[0].password)
-    .getPageTitle
     cy.url().should('contain', '/inventory.html')
     inventoryPage.getPageTitle().should('have.text', 'Swag Labs')
   })
