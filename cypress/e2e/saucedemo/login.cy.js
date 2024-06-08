@@ -16,7 +16,8 @@ describe('Login section tests', () => {
 
   //Test all valid credentials
   LOGIN_USERS.forEach((user) => {
-    it('Test valid credentials for username: ' + user.username, () =>{
+    it('Test valid credentials for username: ' + user.username + 
+        " @allure.label.owner=JohnDoe", () =>{
       allure.description("This test attempts to login with a validar user")
       allure.parameter("username", user.username)
       allure.step("User tries to log in using credentials: " + user.username, () => {
