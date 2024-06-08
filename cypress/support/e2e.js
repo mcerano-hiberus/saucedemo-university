@@ -21,3 +21,6 @@ import './commands'
 
 //mochawesome library import
 import 'cypress-mochawesome-reporter/register';
+
+//allure-js library import
+import "allure-cypress";
