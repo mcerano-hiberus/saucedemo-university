@@ -1,7 +1,7 @@
 name: Run test
 on: [workflow_dispatch]
 jobs:
-  configure-environment:
+  run-cypress-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
