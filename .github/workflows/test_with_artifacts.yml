@@ -12,6 +12,7 @@ jobs:
         run: npx cypress run
       - name: Generate test artifacts
         uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: test-results
           path: |
