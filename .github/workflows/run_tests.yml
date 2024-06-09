@@ -1,0 +1,10 @@
+name: Run test
+on: [workflow_dispatch]
+jobs:
+  configure-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install project dependencies
+        run: npm install
+      - name: Run cypress tests
+        run: npx cypress run
