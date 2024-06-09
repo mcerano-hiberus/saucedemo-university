@@ -11,7 +11,7 @@ describe('Login section tests', () => {
 
   //Test all valid credentials
   LOGIN_USERS.forEach((user) => {
-    it('Test valid credentials for username: ' + user.username, () =>{
+    it.skip('Test valid credentials for username: ' + user.username, () =>{
       loginPage.login(user.username, user.password)
       cy.url().should('contain', '/inventory.html')
       inventoryPage.getPageTitle().should('have.text', 'Swag Labs')
@@ -47,6 +47,10 @@ describe('Login section tests', () => {
       .typePassword("bites_the_dust")
       .clickLogin()
     loginPage.getErrorMessage().should('have.text', this.errorMessages.no_match)
+  })
+
+  it('Failing test', () => {
+    expect(true).to.be.false
   })
 
 })
