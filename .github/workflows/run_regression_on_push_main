@@ -1,4 +1,4 @@
-name: Run test on push main
+name: Run test on push actionable-branch
 on:
   push:
     branches: ['actionable-branch']
