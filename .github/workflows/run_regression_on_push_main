@@ -1,0 +1,14 @@
+name: Run test on push actionable-branch
+on:
+  push:
+    branches: ['actionable-branch']
+jobs:
+  run-cypress-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.5
+      - name: Install project dependencies
+        run: npm install
+      - name: Run cypress tests
+        run: npx cypress run
