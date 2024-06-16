@@ -1,4 +1,4 @@
-name: Run test and generate artifacts
+name: (Saucedemo) Run test and generate artifacts
 on: [workflow_dispatch]
 jobs:
   run-cypress-tests:

@@ -1,4 +1,4 @@
-name: Run test
+name: (Saucedemo) Run test
 on: [workflow_dispatch]
 jobs:
   run-cypress-tests:
